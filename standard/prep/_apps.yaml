@@ -1,0 +1,7 @@
+nginx-ingress:
+  source:
+    repoURL: https://github.com/dbirenfe/app-nginx-ingress
+    targetRevision: release/v2.1
+    helm:
+      valuesFiles:
+        - values-standard.yaml

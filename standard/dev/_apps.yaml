@@ -1,0 +1,7 @@
+monitoring-stack:
+  source:
+    repoURL: https://github.com/dbirenfe/app-monitoring-stack
+    targetRevision: feature/new-dashboards
+    helm:
+      valuesFiles:
+        - values-standard.yaml

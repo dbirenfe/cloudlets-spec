@@ -1,0 +1,31 @@
+nginx-ingress:
+  source:
+    repoURL: https://github.com/dbirenfe/app-nginx-ingress
+    targetRevision: main
+    helm:
+      valuesFiles:
+        - values.yaml
+
+monitoring-stack:
+  source:
+    repoURL: https://github.com/dbirenfe/app-monitoring-stack
+    targetRevision: main
+    helm:
+      valuesFiles:
+        - values.yaml
+
+logging-agent:
+  source:
+    repoURL: https://github.com/dbirenfe/app-logging-agent
+    targetRevision: main
+    helm:
+      valuesFiles:
+        - values.yaml
+
+cert-manager:
+  source:
+    repoURL: https://github.com/dbirenfe/app-cert-manager
+    targetRevision: main
+    helm:
+      valuesFiles:
+        - values.yaml

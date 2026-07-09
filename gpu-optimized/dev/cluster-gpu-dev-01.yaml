@@ -1,0 +1,15 @@
+gpu-operator:
+  source:
+    repoURL: https://github.com/dbirenfe/app-gpu-operator
+    targetRevision: experiment/cuda-12
+    helm:
+      valuesFiles:
+        - values.yaml
+
+monitoring-stack:
+  source:
+    repoURL: https://github.com/dbirenfe/app-monitoring-stack
+    targetRevision: feature/gpu-metrics
+    helm:
+      valuesFiles:
+        - values-gpu.yaml

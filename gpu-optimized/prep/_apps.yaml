@@ -1,0 +1,7 @@
+gpu-operator:
+  source:
+    repoURL: https://github.com/dbirenfe/app-gpu-operator
+    targetRevision: release/v1.0
+    helm:
+      valuesFiles:
+        - values.yaml
