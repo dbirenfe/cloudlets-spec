@@ -1,23 +1,22 @@
-nginx-ingress:
-  source:
-    repoURL: https://github.com/dbirenfe/app-nginx-ingress
-    targetRevision: main
-    helm:
-      valuesFiles:
-        - values-gpu.yaml
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      helm:
+        valueFiles:
+          - values-gpu.yaml
 
-monitoring-stack:
-  source:
-    repoURL: https://github.com/dbirenfe/app-monitoring-stack
-    targetRevision: main
-    helm:
-      valuesFiles:
-        - values-gpu.yaml
+hubApps:
+  monitoring-stack:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      helm:
+        valueFiles:
+          - values-gpu.yaml
 
-gpu-operator:
-  source:
-    repoURL: https://github.com/dbirenfe/app-gpu-operator
-    targetRevision: main
-    helm:
-      valuesFiles:
-        - values.yaml
+  gpu-operator:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-gpu-operator

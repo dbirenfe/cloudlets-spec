@@ -1,7 +1,1 @@
-gpu-operator:
-  source:
-    repoURL: https://github.com/dbirenfe/app-gpu-operator
-    targetRevision: main
-    helm:
-      valuesFiles:
-        - values.yaml
+# No overrides - uses flavor defaults

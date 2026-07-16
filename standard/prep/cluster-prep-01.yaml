@@ -1,7 +1,9 @@
-cert-manager:
-  source:
-    repoURL: https://github.com/dbirenfe/app-cert-manager
-    targetRevision: feature/wildcard-certs
-    helm:
-      valuesFiles:
-        - values.yaml
+hubApps:
+  cert-manager:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-cert-manager
+      targetRevision: feature/wildcard-certs
+      helm:
+        valueFiles:
+          - values.yaml

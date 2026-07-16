@@ -1,7 +1,6 @@
-gpu-operator:
-  source:
-    repoURL: https://github.com/dbirenfe/app-gpu-operator
-    targetRevision: feature/multi-gpu
-    helm:
-      valuesFiles:
-        - values.yaml
+hubApps:
+  gpu-operator:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-gpu-operator
+      targetRevision: feature/multi-gpu

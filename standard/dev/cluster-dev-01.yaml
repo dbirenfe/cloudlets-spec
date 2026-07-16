@@ -1,15 +1,16 @@
-monitoring-stack:
-  source:
-    repoURL: https://github.com/dbirenfe/app-monitoring-stack
-    targetRevision: bugfix/memory-leak
-    helm:
-      valuesFiles:
-        - values-standard.yaml
+hubApps:
+  monitoring-stack:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      targetRevision: bugfix/memory-leak
 
-logging-agent:
-  source:
-    repoURL: https://github.com/dbirenfe/app-logging-agent
-    targetRevision: feature/json-parsing
-    helm:
-      valuesFiles:
-        - values.yaml
+edgeApps:
+  logging-agent:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-logging-agent
+      targetRevision: feature/json-parsing
+      helm:
+        valueFiles:
+          - values.yaml

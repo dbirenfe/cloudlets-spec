@@ -1,7 +1,9 @@
-nginx-ingress:
-  source:
-    repoURL: https://github.com/dbirenfe/app-nginx-ingress
-    targetRevision: feature/deleted-branch-test
-    helm:
-      valuesFiles:
-        - values-gpu.yaml
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      targetRevision: feature/deleted-branch-test
+      helm:
+        valueFiles:
+          - values-gpu.yaml

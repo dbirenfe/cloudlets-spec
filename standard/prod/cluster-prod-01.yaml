@@ -1,7 +1,6 @@
-logging-agent:
-  source:
-    repoURL: https://github.com/dbirenfe/app-logging-agent
-    targetRevision: hotfix/log-rotation
-    helm:
-      valuesFiles:
-        - values.yaml
+edgeApps:
+  logging-agent:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-logging-agent
+      targetRevision: hotfix/log-rotation
