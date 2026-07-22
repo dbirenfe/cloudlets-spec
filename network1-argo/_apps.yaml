@@ -5,16 +5,15 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-          - values.yaml
-
+        - values.yaml
+      targetRevision: release/v2.1
   logging-agent:
     source:
       path: app
       repoURL: https://github.com/dbirenfe/app-logging-agent
       helm:
         valueFiles:
-          - values.yaml
-
+        - values.yaml
 hubApps:
   monitoring-stack:
     source:
@@ -22,8 +21,7 @@ hubApps:
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       helm:
         valueFiles:
-          - values.yaml
-
+        - values.yaml
   cert-manager:
     source:
       path: app
