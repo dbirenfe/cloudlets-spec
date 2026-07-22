@@ -1,0 +1,17 @@
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      helm:
+        valueFiles:
+          - values-standard.yaml
+
+hubApps:
+  monitoring-stack:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      helm:
+        valueFiles:
+          - values-standard.yaml

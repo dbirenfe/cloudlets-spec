@@ -1,0 +1,6 @@
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      targetRevision: feature/rate-limiting

@@ -1,0 +1,9 @@
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      targetRevision: release/v2.1
+      helm:
+        valueFiles:
+          - values-standard.yaml

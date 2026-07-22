@@ -1,0 +1,9 @@
+hubApps:
+  monitoring-stack:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      targetRevision: feature/new-dashboards
+      helm:
+        valueFiles:
+          - values-standard.yaml
