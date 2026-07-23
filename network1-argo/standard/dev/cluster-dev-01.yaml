@@ -4,6 +4,13 @@ hubApps:
       path: app
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       targetRevision: bugfix/memory-leak
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - CreateNamespace=true
+        - ApplyOutOfSyncOnly=true
 
 edgeApps:
   logging-agent:
