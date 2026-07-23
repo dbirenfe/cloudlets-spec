@@ -5,11 +5,14 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-        - values-standard.yaml
+        - values.yaml
+      targetRevision: feature/rate-limiting
     syncPolicy:
       automated:
         prune: true
-        selfHeal: false
+        selfHeal: true
+      syncOptions:
+      - ServerSideApply=true
   logging-agent:
     source:
       path: app
