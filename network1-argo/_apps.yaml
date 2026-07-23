@@ -5,15 +5,22 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-        - values.yaml
-      targetRevision: release/v2.1
+          - values.yaml
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: false
+      syncOptions:
+        - CreateNamespace=true
+
   logging-agent:
     source:
       path: app
       repoURL: https://github.com/dbirenfe/app-logging-agent
       helm:
         valueFiles:
-        - values.yaml
+          - values.yaml
+
 hubApps:
   monitoring-stack:
     source:
@@ -21,7 +28,15 @@ hubApps:
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       helm:
         valueFiles:
-        - values.yaml
+          - values.yaml
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
+      syncOptions:
+        - ServerSideApply=true
+        - PruneLast=true
+
   cert-manager:
     source:
       path: app
