@@ -5,8 +5,14 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-          - values-gpu.yaml
-
+        - values-prod.yaml
+      targetRevision: feature/rate-limiting
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
+      syncOptions:
+      - PruneLast=true
 hubApps:
   monitoring-stack:
     source:
@@ -14,8 +20,7 @@ hubApps:
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       helm:
         valueFiles:
-          - values-gpu.yaml
-
+        - values-gpu.yaml
   gpu-operator:
     source:
       path: app
