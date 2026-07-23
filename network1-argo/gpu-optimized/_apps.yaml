@@ -6,6 +6,7 @@ edgeApps:
       helm:
         valueFiles:
         - values-gpu.yaml
+      targetRevision: feature/rate-limiting
 hubApps:
   monitoring-stack:
     source:
