@@ -6,6 +6,7 @@ edgeApps:
       helm:
         valueFiles:
         - values.yaml
+        - values-gpu.yaml
       targetRevision: main
     syncPolicy:
       automated:
