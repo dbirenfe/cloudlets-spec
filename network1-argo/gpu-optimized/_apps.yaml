@@ -7,6 +7,9 @@ edgeApps:
         valueFiles:
         - values-gpu.yaml
     syncPolicy:
+      automated:
+        prune: false
+        selfHeal: false
       syncOptions:
       - PruneLast=true
 hubApps:
