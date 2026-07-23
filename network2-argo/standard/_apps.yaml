@@ -5,8 +5,10 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-          - values-standard.yaml
-
+        - values-standard.yaml
+    syncPolicy:
+      automated: null
+      syncOptions: null
 hubApps:
   monitoring-stack:
     source:
@@ -14,4 +16,4 @@ hubApps:
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       helm:
         valueFiles:
-          - values-standard.yaml
+        - values-standard.yaml
