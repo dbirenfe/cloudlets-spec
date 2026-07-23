@@ -7,11 +7,7 @@ edgeApps:
         valueFiles:
         - values-gpu.yaml
     syncPolicy:
-      automated:
-        prune: false
-        selfHeal: true
       syncOptions:
-      - ServerSideApply=true
       - PruneLast=true
 hubApps:
   monitoring-stack:
