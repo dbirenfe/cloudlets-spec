@@ -6,6 +6,7 @@ edgeApps:
       helm:
         valueFiles:
         - values-gpu.yaml
+      targetRevision: release/v2.1
 hubApps:
   monitoring-stack:
     source:
