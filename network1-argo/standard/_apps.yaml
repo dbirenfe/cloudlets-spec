@@ -5,8 +5,8 @@ edgeApps:
       repoURL: https://github.com/dbirenfe/app-nginx-ingress
       helm:
         valueFiles:
-          - values-standard.yaml
-
+        - values-standard.yaml
+      targetRevision: feature/rate-limiting
 hubApps:
   monitoring-stack:
     source:
@@ -14,4 +14,4 @@ hubApps:
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
       helm:
         valueFiles:
-          - values-standard.yaml
+        - values-standard.yaml
