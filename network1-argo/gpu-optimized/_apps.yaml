@@ -9,7 +9,7 @@ edgeApps:
     syncPolicy:
       automated:
         prune: false
-        selfHeal: false
+        selfHeal: true
       syncOptions:
       - PruneLast=true
 hubApps:
