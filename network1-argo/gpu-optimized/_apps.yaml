@@ -8,7 +8,7 @@ edgeApps:
         - values-gpu.yaml
     syncPolicy:
       automated:
-        prune: false
+        prune: true
         selfHeal: true
       syncOptions:
       - ServerSideApply=true
