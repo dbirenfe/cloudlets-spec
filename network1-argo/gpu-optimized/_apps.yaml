@@ -9,7 +9,9 @@ edgeApps:
     syncPolicy:
       automated:
         prune: false
-        selfHeal: false
+        selfHeal: true
+      syncOptions:
+      - Replace=true
 hubApps:
   monitoring-stack:
     source:
