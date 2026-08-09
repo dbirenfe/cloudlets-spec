@@ -16,9 +16,10 @@ hubApps:
     source:
       path: app
       repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      targetRevision: experiment/cuda-12
       helm:
         valueFiles:
-        - values-gpu01.yaml
+        - values-gpu.yaml
 edgeApps:
   nginx-ingress:
     source:
