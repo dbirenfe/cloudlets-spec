@@ -4,7 +4,6 @@ hubApps:
       path: app
       repoURL: https://github.com/dbirenfe/app-gpu-operator
       targetRevision: experiment/cuda-12
-
   monitoring-stack:
     source:
       path: app
@@ -12,4 +11,19 @@ hubApps:
       targetRevision: feature/gpu-metrics
       helm:
         valueFiles:
-          - values-gpu.yaml
+        - values-gpu.yaml
+edgeApps:
+  nginx-ingress:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      helm:
+        valueFiles:
+        - values.yaml
+      targetRevision: feature/rate-limiting
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+      - ServerSideApply=true
