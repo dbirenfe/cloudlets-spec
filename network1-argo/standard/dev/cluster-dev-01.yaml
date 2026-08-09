@@ -20,10 +20,3 @@ edgeApps:
       helm:
         valueFiles:
         - values.yaml
-  nginx-ingress`sds`x:
-    source:
-      path: app
-      repoURL: https://github.com/dbirenfe/app-nginx-ingress
-      helm:
-        valueFiles:
-        - values-gpu.yaml
