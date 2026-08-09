@@ -12,6 +12,13 @@ hubApps:
       helm:
         valueFiles:
         - values-gpu.yaml
+  monitoring-stack-test1:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-monitoring-stack
+      helm:
+        valueFiles:
+        - values-gpu.yaml
 edgeApps:
   nginx-ingress:
     source:
