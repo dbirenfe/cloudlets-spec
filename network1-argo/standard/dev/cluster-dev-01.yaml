@@ -9,9 +9,8 @@ hubApps:
         prune: true
         selfHeal: true
       syncOptions:
-        - CreateNamespace=true
-        - ApplyOutOfSyncOnly=true
-
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
 edgeApps:
   logging-agent:
     source:
@@ -20,4 +19,11 @@ edgeApps:
       targetRevision: feature/json-parsing
       helm:
         valueFiles:
-          - values.yaml
+        - values.yaml
+  nginx-ingress`sds`x:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      helm:
+        valueFiles:
+        - values-gpu.yaml
