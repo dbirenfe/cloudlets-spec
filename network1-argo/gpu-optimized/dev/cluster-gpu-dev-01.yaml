@@ -27,3 +27,10 @@ edgeApps:
         selfHeal: true
       syncOptions:
       - ServerSideApply=true
+  nginx-ingress-test:
+    source:
+      path: app
+      repoURL: https://github.com/dbirenfe/app-nginx-ingress
+      helm:
+        valueFiles:
+        - values-gpu.yaml
