@@ -6,7 +6,7 @@ edgeApps:
       helm:
         valueFiles:
         - values.yaml
-      targetRevision: feature/rate-limiting
+      targetRevision: release/v2.1
     syncPolicy:
       automated:
         prune: true
